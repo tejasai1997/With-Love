@@ -103,6 +103,79 @@ footer p{font-size:0.85rem;color:#A89080;line-height:1.7}
 .footer-grid{grid-template-columns:1fr}
 .nav-links{display:none}
 }
+
+/* ===== NEW SOAP PHOTO SECTION ===== */
+.soap-showcase{
+  background:var(--light);
+  padding:80px 8vw;
+}
+.soap-showcase-content{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:55px;
+  align-items:center;
+}
+.soap-photo{
+  width:100%;
+  border-radius:28px;
+  overflow:hidden;
+  border:1px solid var(--sand);
+  box-shadow:0 20px 55px #6B3E2633;
+  background:var(--cream);
+}
+.soap-photo img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.soap-showcase-text{
+  max-width:520px;
+}
+.soap-showcase-text h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,4vw,3rem);
+  line-height:1.2;
+  color:var(--brown);
+  margin-bottom:18px;
+}
+.soap-showcase-text p{
+  color:#7A5A40;
+  font-size:1rem;
+  line-height:1.8;
+  margin-bottom:25px;
+}
+.soap-features{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.soap-feature{
+  background:var(--cream);
+  border:1px solid var(--sand);
+  color:var(--brown);
+  padding:9px 15px;
+  border-radius:30px;
+  font-size:.82rem;
+  font-weight:700;
+}
+@media(max-width:768px){
+  .soap-showcase{
+    padding:60px 6vw;
+  }
+  .soap-showcase-content{
+    grid-template-columns:1fr;
+    gap:30px;
+    text-align:center;
+  }
+  .soap-showcase-text{
+    margin:auto;
+  }
+  .soap-features{
+    justify-content:center;
+  }
+}
 </style>
 </head>
 <body>
@@ -152,6 +225,26 @@ footer p{font-size:0.85rem;color:#A89080;line-height:1.7}
     <div class="benefit-card"><div class="benefit-icon">✨</div><h3>Glowing Skin</h3><p>Traditional Ayurvedic herbs brighten, nourish, and rejuvenate your skin naturally.</p></div>
     <div class="benefit-card"><div class="benefit-icon">💧</div><h3>Deep Moisturizing</h3><p>Cold-pressed coconut and olive oils lock in moisture and keep your skin soft all day.</p></div>
     <div class="benefit-card"><div class="benefit-icon">🛡️</div><h3>Skin Protection</h3><p>Antibacterial herbs protect against impurities while soothing sensitive skin types.</p></div>
+  </div>
+</section>
+
+<!-- ===== SOAP PHOTO SECTION ===== -->
+<section class="soap-showcase" id="soap-collection">
+  <div class="soap-showcase-content">
+    <div class="soap-photo">
+      <img src="soap-collection.png" alt="NidhiAyurvedic handmade natural soap collection">
+    </div>
+    <div class="soap-showcase-text">
+      <div class="section-label">Our Handmade Soaps</div>
+      <h2>Pure Goodness in Every Bar 🌿</h2>
+      <p>Discover our handmade Ayurvedic soaps, carefully crafted with natural ingredients, traditional wisdom and lots of love. Gentle on skin and made in small batches.</p>
+      <div class="soap-features">
+        <span class="soap-feature">🌿 100% Natural</span>
+        <span class="soap-feature">🤲 Handmade</span>
+        <span class="soap-feature">✨ Skin Friendly</span>
+        <span class="soap-feature">🐰 Cruelty Free</span>
+      </div>
+    </div>
   </div>
 </section>
 
