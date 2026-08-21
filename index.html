@@ -3,374 +3,1304 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NidhiAyurvedic – Handmade Ayurvedic Soaps</title>
+
+<title>With Love – Handmade Ayurvedic Soaps</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--cream:#FAF6EF;--sand:#E8D9C0;--clay:#C4855A;--brown:#6B3E26;--olive:#7A8C5E;--text:#3A2A1A;--light:#FFF9F3}
-body{background:var(--cream);color:var(--text);font-family:'Lato',sans-serif;line-height:1.6;overflow-x:hidden}
-nav{background:var(--light);border-bottom:1px solid var(--sand);display:flex;align-items:center;justify-content:space-between;padding:14px 32px;position:sticky;top:0;z-index:100}
-.brand{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--brown);letter-spacing:1px}
-.brand span{color:var(--clay);font-style:italic}
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{text-decoration:none;color:var(--text);font-size:0.9rem;font-weight:700;transition:color 0.2s}
-.nav-links a:hover{color:var(--clay)}
-.nav-cta{background:var(--clay);color:#fff;border:none;padding:9px 22px;border-radius:30px;font-weight:700;font-size:0.88rem;cursor:pointer}
-.hero{display:flex;align-items:center;min-height:88vh;background:linear-gradient(135deg,#FAF6EF 55%,#EDD9BF 100%);padding:60px 8vw;gap:48px;overflow:hidden}
-.hero-text{flex:1;max-width:540px}
-.eyebrow{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:var(--olive);font-weight:700;margin-bottom:14px}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,3.8rem);color:var(--brown);line-height:1.15;margin-bottom:20px}
-.hero h1 em{color:var(--clay);font-style:italic}
-.hero p{font-size:1.05rem;color:#5A4030;max-width:420px;margin-bottom:32px;font-weight:300}
-.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
-.btn-primary{background:var(--clay);color:#fff;padding:14px 32px;border-radius:40px;text-decoration:none;font-weight:700;font-size:0.95rem;display:inline-block}
-.btn-ghost{border:2px solid var(--clay);color:var(--clay);padding:13px 28px;border-radius:40px;text-decoration:none;font-weight:700;font-size:0.95rem;display:inline-block}
-.btn-ghost:hover{background:var(--clay);color:#fff}
-.hero-visual{flex:1;display:flex;justify-content:center;align-items:center}
-.soap-plate{width:min(380px,90vw);height:min(380px,90vw);border-radius:50%;background:radial-gradient(circle at 40% 40%,#EDD3A8,#C4855A55);display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 20px 60px #C4855A33}
-.soap-emoji{font-size:9rem;filter:drop-shadow(0 8px 20px #C4855A55)}
-.badge{position:absolute;bottom:20px;right:-10px;background:var(--brown);color:#fff;border-radius:50px;padding:10px 20px;font-size:0.85rem;font-weight:700}
-.badge span{font-size:1.1rem;color:var(--sand)}
-.trust-bar{background:var(--brown);display:flex;justify-content:center;gap:40px;padding:18px 32px;flex-wrap:wrap}
-.trust-item{color:var(--sand);font-size:0.88rem;font-weight:700;display:flex;align-items:center;gap:8px}
-section{padding:80px 8vw}
-.section-label{font-size:0.75rem;letter-spacing:4px;text-transform:uppercase;color:var(--olive);font-weight:700;margin-bottom:10px}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--brown);margin-bottom:16px}
-.section-sub{color:#7A5A40;font-weight:300;max-width:520px}
-.benefits{background:var(--light)}
-.benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;margin-top:44px}
-.benefit-card{background:var(--cream);border-radius:20px;padding:32px 24px;border:1px solid var(--sand);text-align:center;transition:transform 0.2s}
-.benefit-card:hover{transform:translateY(-6px);box-shadow:0 12px 36px #C4855A22}
-.benefit-icon{font-size:2.4rem;margin-bottom:16px}
-.benefit-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--brown);margin-bottom:8px}
-.benefit-card p{font-size:0.88rem;color:#7A5A40;line-height:1.6}
-.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:32px;margin-top:44px}
-.product-card{background:var(--light);border-radius:24px;overflow:hidden;border:1px solid var(--sand);transition:transform 0.2s}
-.product-card:hover{transform:translateY(-8px);box-shadow:0 16px 40px #C4855A28}
-.product-img{height:200px;display:flex;align-items:center;justify-content:center;font-size:5rem}
-.product-img.turmeric{background:linear-gradient(135deg,#F5E6C8,#E8C88A)}
-.product-img.neem{background:linear-gradient(135deg,#D4E8C8,#A8C87A)}
-.product-img.saffron{background:linear-gradient(135deg,#F5D8C8,#E8A87A)}
-.product-img.charcoal{background:linear-gradient(135deg,#D8D0C8,#9A9080)}
-.product-body{padding:24px}
-.product-body h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--brown);margin-bottom:6px}
-.product-body p{font-size:0.85rem;color:#7A5A40;margin-bottom:16px;line-height:1.55}
-.product-footer{display:flex;align-items:center;justify-content:space-between}
-.price{font-size:1.4rem;font-weight:700;color:var(--clay)}
-.price small{font-size:0.75rem;color:#9A7A60;font-weight:400}
-.add-btn{background:var(--clay);color:#fff;border:none;padding:9px 20px;border-radius:30px;font-weight:700;font-size:0.85rem;cursor:pointer}
-.tag{display:inline-block;background:var(--olive);color:#fff;font-size:0.68rem;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:10px;text-transform:uppercase}
-.made{background:var(--brown);color:var(--sand)}
-.made .section-title{color:var(--sand)}
-.made .section-label{color:var(--clay)}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;margin-top:44px}
-.step{text-align:center}
-.step-num{width:60px;height:60px;border-radius:50%;background:var(--clay);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.5rem;margin:0 auto 16px}
-.step h4{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--sand);margin-bottom:8px}
-.step p{font-size:0.85rem;color:#C4A882;line-height:1.6}
-.testimonials{background:var(--light)}
-.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:44px}
-.review-card{background:var(--cream);border-radius:20px;padding:28px;border-left:4px solid var(--clay)}
-.stars{color:var(--clay);font-size:1rem;margin-bottom:12px}
-.review-card p{font-size:0.9rem;color:#5A4030;line-height:1.7;font-style:italic;margin-bottom:14px}
-.reviewer{font-weight:700;font-size:0.85rem;color:var(--brown)}
-.reviewer span{font-weight:300;color:#9A7A60}
-.order-cta{background:linear-gradient(135deg,#E8C88A,#C4855A);text-align:center;padding:80px 8vw}
-.order-cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);color:var(--brown);margin-bottom:14px}
-.order-cta p{color:var(--brown);font-size:1rem;margin-bottom:32px;font-weight:300}
-.order-box{display:inline-flex;gap:12px;flex-wrap:wrap;background:rgba(255,255,255,0.35);border-radius:50px;padding:8px}
-.order-box input{border:none;background:transparent;padding:10px 20px;font-size:0.95rem;color:var(--brown);outline:none;width:220px}
-.order-box button{background:var(--brown);color:#fff;border:none;padding:12px 28px;border-radius:40px;font-weight:700;font-size:0.9rem;cursor:pointer}
-footer{background:var(--text);color:var(--sand);padding:40px 8vw 24px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px}
-.footer-brand{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--sand);margin-bottom:12px}
-.footer-brand span{color:var(--clay);font-style:italic}
-footer p{font-size:0.85rem;color:#A89080;line-height:1.7}
-.footer-links h4{font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:14px}
-.footer-links ul{list-style:none}
-.footer-links li{margin-bottom:8px}
-.footer-links a{color:#A89080;text-decoration:none;font-size:0.85rem}
-.footer-bottom{border-top:1px solid #5A4030;padding-top:18px;font-size:0.78rem;color:#6A5040;text-align:center}
-.toast{position:fixed;bottom:28px;right:28px;background:var(--brown);color:var(--sand);padding:14px 24px;border-radius:12px;font-weight:700;font-size:0.9rem;box-shadow:0 8px 28px #0004;transform:translateY(80px);opacity:0;transition:all 0.3s;z-index:999}
-.toast.show{transform:translateY(0);opacity:1}
-@media(max-width:768px){
-.hero{flex-direction:column;text-align:center;padding:48px 6vw}
-.hero p{margin:0 auto 28px}
-.hero-btns{justify-content:center}
-.soap-plate{width:240px;height:240px}
-.soap-emoji{font-size:6rem}
-.trust-bar{gap:20px}
-.footer-grid{grid-template-columns:1fr}
-.nav-links{display:none}
+
+:root{
+--cream:#FAF6EF;
+--sand:#E8D9C0;
+--clay:#C4855A;
+--brown:#6B3E26;
+--olive:#7A8C5E;
+--text:#3A2A1A;
+--light:#FFF9F3
 }
 
-/* ===== NEW SOAP PHOTO SECTION ===== */
+body{
+background:var(--cream);
+color:var(--text);
+font-family:'Lato',sans-serif;
+line-height:1.6;
+overflow-x:hidden
+}
+
+nav{
+background:var(--light);
+border-bottom:1px solid var(--sand);
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:14px 32px;
+position:sticky;
+top:0;
+z-index:100
+}
+
+.brand{
+font-family:'Playfair Display',serif;
+font-size:1.5rem;
+color:var(--brown);
+letter-spacing:1px
+}
+
+.brand span{
+color:var(--clay);
+font-style:italic
+}
+
+.nav-links{
+display:flex;
+gap:28px;
+list-style:none
+}
+
+.nav-links a{
+text-decoration:none;
+color:var(--text);
+font-size:0.9rem;
+font-weight:700;
+transition:color 0.2s
+}
+
+.nav-links a:hover{
+color:var(--clay)
+}
+
+.nav-cta{
+background:var(--clay);
+color:#fff;
+border:none;
+padding:9px 22px;
+border-radius:30px;
+font-weight:700;
+font-size:0.88rem;
+cursor:pointer
+}
+
+.hero{
+display:flex;
+align-items:center;
+min-height:88vh;
+background:linear-gradient(135deg,#FAF6EF 55%,#EDD9BF 100%);
+padding:60px 8vw;
+gap:48px;
+overflow:hidden
+}
+
+.hero-text{
+flex:1;
+max-width:540px
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:3px;
+text-transform:uppercase;
+color:var(--olive);
+font-weight:700;
+margin-bottom:14px
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:clamp(2.4rem,5vw,3.8rem);
+color:var(--brown);
+line-height:1.15;
+margin-bottom:20px
+}
+
+.hero h1 em{
+color:var(--clay);
+font-style:italic
+}
+
+.hero p{
+font-size:1.05rem;
+color:#5A4030;
+max-width:420px;
+margin-bottom:32px;
+font-weight:300
+}
+
+.hero-btns{
+display:flex;
+gap:16px;
+flex-wrap:wrap
+}
+
+.btn-primary{
+background:var(--clay);
+color:#fff;
+padding:14px 32px;
+border-radius:40px;
+text-decoration:none;
+font-weight:700;
+font-size:0.95rem;
+display:inline-block
+}
+
+.btn-ghost{
+border:2px solid var(--clay);
+color:var(--clay);
+padding:13px 28px;
+border-radius:40px;
+text-decoration:none;
+font-weight:700;
+font-size:0.95rem;
+display:inline-block
+}
+
+.btn-ghost:hover{
+background:var(--clay);
+color:#fff
+}
+
+.hero-visual{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center
+}
+
+.soap-plate{
+width:min(380px,90vw);
+height:min(380px,90vw);
+border-radius:50%;
+background:radial-gradient(circle at 40% 40%,#EDD3A8,#C4855A55);
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+box-shadow:0 20px 60px #C4855A33
+}
+
+.soap-emoji{
+font-size:9rem;
+filter:drop-shadow(0 8px 20px #C4855A55)
+}
+
+.badge{
+position:absolute;
+bottom:20px;
+right:-10px;
+background:var(--brown);
+color:#fff;
+border-radius:50px;
+padding:10px 20px;
+font-size:0.85rem;
+font-weight:700
+}
+
+.badge span{
+font-size:1.1rem;
+color:var(--sand)
+}
+
+.trust-bar{
+background:var(--brown);
+display:flex;
+justify-content:center;
+gap:40px;
+padding:18px 32px;
+flex-wrap:wrap
+}
+
+.trust-item{
+color:var(--sand);
+font-size:0.88rem;
+font-weight:700;
+display:flex;
+align-items:center;
+gap:8px
+}
+
+section{
+padding:80px 8vw
+}
+
+.section-label{
+font-size:0.75rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:var(--olive);
+font-weight:700;
+margin-bottom:10px
+}
+
+.section-title{
+font-family:'Playfair Display',serif;
+font-size:clamp(1.8rem,3.5vw,2.8rem);
+color:var(--brown);
+margin-bottom:16px
+}
+
+.section-sub{
+color:#7A5A40;
+font-weight:300;
+max-width:520px
+}
+
+.benefits{
+background:var(--light)
+}
+
+.benefits-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:28px;
+margin-top:44px
+}
+
+.benefit-card{
+background:var(--cream);
+border-radius:20px;
+padding:32px 24px;
+border:1px solid var(--sand);
+text-align:center;
+transition:transform 0.2s
+}
+
+.benefit-card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 36px #C4855A22
+}
+
+.benefit-icon{
+font-size:2.4rem;
+margin-bottom:16px
+}
+
+.benefit-card h3{
+font-family:'Playfair Display',serif;
+font-size:1.1rem;
+color:var(--brown);
+margin-bottom:8px
+}
+
+.benefit-card p{
+font-size:0.88rem;
+color:#7A5A40;
+line-height:1.6
+}
+
+.products-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+gap:32px;
+margin-top:44px
+}
+
+.product-card{
+background:var(--light);
+border-radius:24px;
+overflow:hidden;
+border:1px solid var(--sand);
+transition:transform 0.2s
+}
+
+.product-card:hover{
+transform:translateY(-8px);
+box-shadow:0 16px 40px #C4855A28
+}
+
+.product-img{
+height:200px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:5rem
+}
+
+.product-img.turmeric{
+background:linear-gradient(135deg,#F5E6C8,#E8C88A)
+}
+
+.product-img.neem{
+background:linear-gradient(135deg,#D4E8C8,#A8C87A)
+}
+
+.product-img.saffron{
+background:linear-gradient(135deg,#F5D8C8,#E8A87A)
+}
+
+.product-img.charcoal{
+background:linear-gradient(135deg,#D8D0C8,#9A9080)
+}
+
+.product-body{
+padding:24px
+}
+
+.product-body h3{
+font-family:'Playfair Display',serif;
+font-size:1.2rem;
+color:var(--brown);
+margin-bottom:6px
+}
+
+.product-body p{
+font-size:0.85rem;
+color:#7A5A40;
+margin-bottom:16px;
+line-height:1.55
+}
+
+.product-footer{
+display:flex;
+align-items:center;
+justify-content:space-between
+}
+
+.price{
+font-size:1.4rem;
+font-weight:700;
+color:var(--clay)
+}
+
+.price small{
+font-size:0.75rem;
+color:#9A7A60;
+font-weight:400
+}
+
+.add-btn{
+background:var(--clay);
+color:#fff;
+border:none;
+padding:9px 20px;
+border-radius:30px;
+font-weight:700;
+font-size:0.85rem;
+cursor:pointer
+}
+
+.tag{
+display:inline-block;
+background:var(--olive);
+color:#fff;
+font-size:0.68rem;
+font-weight:700;
+padding:3px 10px;
+border-radius:20px;
+margin-bottom:10px;
+text-transform:uppercase
+}
+
+.made{
+background:var(--brown);
+color:var(--sand)
+}
+
+.made .section-title{
+color:var(--sand)
+}
+
+.made .section-label{
+color:var(--clay)
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:32px;
+margin-top:44px
+}
+
+.step{
+text-align:center
+}
+
+.step-num{
+width:60px;
+height:60px;
+border-radius:50%;
+background:var(--clay);
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-family:'Playfair Display',serif;
+font-size:1.5rem;
+margin:0 auto 16px
+}
+
+.step h4{
+font-family:'Playfair Display',serif;
+font-size:1.05rem;
+color:var(--sand);
+margin-bottom:8px
+}
+
+.step p{
+font-size:0.85rem;
+color:#C4A882;
+line-height:1.6
+}
+
+.testimonials{
+background:var(--light)
+}
+
+.reviews-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
+margin-top:44px
+}
+
+.review-card{
+background:var(--cream);
+border-radius:20px;
+padding:28px;
+border-left:4px solid var(--clay)
+}
+
+.stars{
+color:var(--clay);
+font-size:1rem;
+margin-bottom:12px
+}
+
+.review-card p{
+font-size:0.9rem;
+color:#5A4030;
+line-height:1.7;
+font-style:italic;
+margin-bottom:14px
+}
+
+.reviewer{
+font-weight:700;
+font-size:0.85rem;
+color:var(--brown)
+}
+
+.reviewer span{
+font-weight:300;
+color:#9A7A60
+}
+
+.order-cta{
+background:linear-gradient(135deg,#E8C88A,#C4855A);
+text-align:center;
+padding:80px 8vw
+}
+
+.order-cta h2{
+font-family:'Playfair Display',serif;
+font-size:clamp(1.8rem,4vw,3rem);
+color:var(--brown);
+margin-bottom:14px
+}
+
+.order-cta p{
+color:var(--brown);
+font-size:1rem;
+margin-bottom:32px;
+font-weight:300
+}
+
+.order-box{
+display:inline-flex;
+gap:12px;
+flex-wrap:wrap;
+background:rgba(255,255,255,0.35);
+border-radius:50px;
+padding:8px
+}
+
+.order-box input{
+border:none;
+background:transparent;
+padding:10px 20px;
+font-size:0.95rem;
+color:var(--brown);
+outline:none;
+width:220px
+}
+
+.order-box button{
+background:var(--brown);
+color:#fff;
+border:none;
+padding:12px 28px;
+border-radius:40px;
+font-weight:700;
+font-size:0.9rem;
+cursor:pointer
+}
+
+footer{
+background:var(--text);
+color:var(--sand);
+padding:40px 8vw 24px
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:40px;
+margin-bottom:36px
+}
+
+.footer-brand{
+font-family:'Playfair Display',serif;
+font-size:1.4rem;
+color:var(--sand);
+margin-bottom:12px
+}
+
+.footer-brand span{
+color:var(--clay);
+font-style:italic
+}
+
+footer p{
+font-size:0.85rem;
+color:#A89080;
+line-height:1.7
+}
+
+.footer-links h4{
+font-size:0.8rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:var(--clay);
+margin-bottom:14px
+}
+
+.footer-links ul{
+list-style:none
+}
+
+.footer-links li{
+margin-bottom:8px
+}
+
+.footer-links a{
+color:#A89080;
+text-decoration:none;
+font-size:0.85rem
+}
+
+.footer-bottom{
+border-top:1px solid #5A4030;
+padding-top:18px;
+font-size:0.78rem;
+color:#6A5040;
+text-align:center
+}
+
+.toast{
+position:fixed;
+bottom:28px;
+right:28px;
+background:var(--brown);
+color:var(--sand);
+padding:14px 24px;
+border-radius:12px;
+font-weight:700;
+font-size:0.9rem;
+box-shadow:0 8px 28px #0004;
+transform:translateY(80px);
+opacity:0;
+transition:all 0.3s;
+z-index:999
+}
+
+.toast.show{
+transform:translateY(0);
+opacity:1
+}
+
+/* ===== SOAP PHOTO SECTION ===== */
+
 .soap-showcase{
-  background:var(--light);
-  padding:80px 8vw;
+background:var(--light);
+padding:80px 8vw
 }
+
 .soap-showcase-content{
-  max-width:1200px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:55px;
-  align-items:center;
+max-width:1200px;
+margin:0 auto;
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:55px;
+align-items:center
 }
+
 .soap-photo{
-  width:100%;
-  border-radius:28px;
-  overflow:hidden;
-  border:1px solid var(--sand);
-  box-shadow:0 20px 55px #6B3E2633;
-  background:var(--cream);
+width:100%;
+border-radius:28px;
+overflow:hidden;
+border:1px solid var(--sand);
+box-shadow:0 20px 55px #6B3E2633;
+background:var(--cream)
 }
+
 .soap-photo img{
-  width:100%;
-  height:auto;
-  display:block;
+width:100%;
+height:auto;
+display:block
 }
+
 .soap-showcase-text{
-  max-width:520px;
+max-width:520px
 }
+
 .soap-showcase-text h2{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(2rem,4vw,3rem);
-  line-height:1.2;
-  color:var(--brown);
-  margin-bottom:18px;
+font-family:'Playfair Display',serif;
+font-size:clamp(2rem,4vw,3rem);
+line-height:1.2;
+color:var(--brown);
+margin-bottom:18px
 }
+
 .soap-showcase-text p{
-  color:#7A5A40;
-  font-size:1rem;
-  line-height:1.8;
-  margin-bottom:25px;
+color:#7A5A40;
+font-size:1rem;
+line-height:1.8;
+margin-bottom:25px
 }
+
 .soap-features{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
+display:flex;
+flex-wrap:wrap;
+gap:12px
 }
+
 .soap-feature{
-  background:var(--cream);
-  border:1px solid var(--sand);
-  color:var(--brown);
-  padding:9px 15px;
-  border-radius:30px;
-  font-size:.82rem;
-  font-weight:700;
+background:var(--cream);
+border:1px solid var(--sand);
+color:var(--brown);
+padding:9px 15px;
+border-radius:30px;
+font-size:.82rem;
+font-weight:700
 }
+
 @media(max-width:768px){
-  .soap-showcase{
-    padding:60px 6vw;
-  }
-  .soap-showcase-content{
-    grid-template-columns:1fr;
-    gap:30px;
-    text-align:center;
-  }
-  .soap-showcase-text{
-    margin:auto;
-  }
-  .soap-features{
-    justify-content:center;
-  }
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding:48px 6vw
+}
+
+.hero p{
+margin:0 auto 28px
+}
+
+.hero-btns{
+justify-content:center
+}
+
+.soap-plate{
+width:240px;
+height:240px
+}
+
+.soap-emoji{
+font-size:6rem
+}
+
+.trust-bar{
+gap:20px
+}
+
+.footer-grid{
+grid-template-columns:1fr
+}
+
+.nav-links{
+display:none
+}
+
+.soap-showcase{
+padding:60px 6vw
+}
+
+.soap-showcase-content{
+grid-template-columns:1fr;
+gap:30px;
+text-align:center
+}
+
+.soap-showcase-text{
+margin:auto
+}
+
+.soap-features{
+justify-content:center
+}
+
 }
 </style>
 </head>
+
 <body>
+
 <nav>
-  <div class="brand">Nidhi<span>Ayurvedic</span></div>
-  <ul class="nav-links">
-    <li><a href="#products">Products</a></li>
-    <li><a href="#benefits">Benefits</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-  </ul>
-  <button class="nav-cta" onclick="scrollOrder()">🛒 Order Now</button>
+
+<div class="brand">With<span> Love ❤️</span></div>
+
+<ul class="nav-links">
+<li><a href="#products">Products</a></li>
+<li><a href="#benefits">Benefits</a></li>
+<li><a href="#process">Process</a></li>
+<li><a href="#reviews">Reviews</a></li>
+</ul>
+
+<button class="nav-cta" onclick="scrollOrder()">🛒 Order Now</button>
+
 </nav>
 
 <section class="hero">
-  <div class="hero-text">
-    <div class="eyebrow">🌿 100% Natural · Chemical Free</div>
-    <h1>Ancient Herbs.<br><em>Modern Glow.</em></h1>
-    <p>Handmade Ayurvedic soaps crafted with love using traditional Indian herbs, cold-pressed oils and pure botanicals.</p>
-    <div class="hero-btns">
-      <a href="#products" class="btn-primary">Shop Soaps ₹300</a>
-      <a href="#benefits" class="btn-ghost">Learn More</a>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <div class="soap-plate">
-      <span class="soap-emoji">🧼</span>
-      <div class="badge">Only <span>₹300</span> / bar</div>
-    </div>
-  </div>
+
+<div class="hero-text">
+
+<div class="eyebrow">🌿 100% Natural · Chemical Free</div>
+
+<h1>Ancient Herbs.<br><em>Modern Glow.</em></h1>
+
+<p>
+Handmade Ayurvedic soaps crafted with love using traditional Indian herbs, cold-pressed oils and pure botanicals.
+</p>
+
+<div class="hero-btns">
+
+<a href="#products" class="btn-primary">
+Shop Soaps ₹300
+</a>
+
+<a href="#benefits" class="btn-ghost">
+Learn More
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-visual">
+
+<div class="soap-plate">
+
+<span class="soap-emoji">🧼</span>
+
+<div class="badge">
+Only <span>₹300</span> / bar
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <div class="trust-bar">
-  <div class="trust-item"><span>🌿</span> 100% Natural</div>
-  <div class="trust-item"><span>🐰</span> Cruelty Free</div>
-  <div class="trust-item"><span>🔬</span> Dermatologist Tested</div>
-  <div class="trust-item"><span>🤲</span> Handmade with Love</div>
-  <div class="trust-item"><span>🚚</span> Free Delivery above ₹600</div>
+
+<div class="trust-item"><span>🌿</span> 100% Natural</div>
+<div class="trust-item"><span>🐰</span> Cruelty Free</div>
+<div class="trust-item"><span>🔬</span> Dermatologist Tested</div>
+<div class="trust-item"><span>🤲</span> Handmade with Love</div>
+<div class="trust-item"><span>🚚</span> Free Delivery above ₹600</div>
+
 </div>
 
 <section class="benefits" id="benefits">
-  <div class="section-label">Why Choose Us</div>
-  <div class="section-title">Pure. Potent. Powerful.</div>
-  <p class="section-sub">Every NidhiAyurvedic soap is made in small batches, preserving the natural goodness of each ingredient.</p>
-  <div class="benefits-grid">
-    <div class="benefit-card"><div class="benefit-icon">🌱</div><h3>No Harsh Chemicals</h3><p>Zero parabens, sulfates, or synthetic fragrances. Just pure herbs, oils, and botanicals.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">✨</div><h3>Glowing Skin</h3><p>Traditional Ayurvedic herbs brighten, nourish, and rejuvenate your skin naturally.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">💧</div><h3>Deep Moisturizing</h3><p>Cold-pressed coconut and olive oils lock in moisture and keep your skin soft all day.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">🛡️</div><h3>Skin Protection</h3><p>Antibacterial herbs protect against impurities while soothing sensitive skin types.</p></div>
-  </div>
+
+<div class="section-label">Why Choose Us</div>
+
+<div class="section-title">
+Pure. Potent. Powerful.
+</div>
+
+<p class="section-sub">
+Every With Love soap is made in small batches, preserving the natural goodness of each ingredient.
+</p>
+
+<div class="benefits-grid">
+
+<div class="benefit-card">
+<div class="benefit-icon">🌱</div>
+<h3>No Harsh Chemicals</h3>
+<p>
+Zero parabens, sulfates, or synthetic fragrances. Just pure herbs, oils, and botanicals.
+</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">✨</div>
+<h3>Glowing Skin</h3>
+<p>
+Traditional Ayurvedic herbs brighten, nourish, and rejuvenate your skin naturally.
+</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">💧</div>
+<h3>Deep Moisturizing</h3>
+<p>
+Cold-pressed coconut and olive oils lock in moisture and keep your skin soft all day.
+</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🛡️</div>
+<h3>Skin Protection</h3>
+<p>
+Antibacterial herbs protect against impurities while soothing sensitive skin types.
+</p>
+</div>
+
+</div>
+
 </section>
 
-<!-- ===== SOAP PHOTO SECTION ===== -->
+<!-- SOAP PHOTO SECTION -->
+
 <section class="soap-showcase" id="soap-collection">
-  <div class="soap-showcase-content">
-    <div class="soap-photo">
-      <img src="soap-collection.png" alt="NidhiAyurvedic handmade natural soap collection">
-    </div>
-    <div class="soap-showcase-text">
-      <div class="section-label">Our Handmade Soaps</div>
-      <h2>Pure Goodness in Every Bar 🌿</h2>
-      <p>Discover our handmade Ayurvedic soaps, carefully crafted with natural ingredients, traditional wisdom and lots of love. Gentle on skin and made in small batches.</p>
-      <div class="soap-features">
-        <span class="soap-feature">🌿 100% Natural</span>
-        <span class="soap-feature">🤲 Handmade</span>
-        <span class="soap-feature">✨ Skin Friendly</span>
-        <span class="soap-feature">🐰 Cruelty Free</span>
-      </div>
-    </div>
-  </div>
+
+<div class="soap-showcase-content">
+
+<div class="soap-photo">
+
+<img
+src="soap-collection.png"
+alt="With Love handmade natural soap collection"
+>
+
+</div>
+
+<div class="soap-showcase-text">
+
+<div class="section-label">
+Our Handmade Soaps
+</div>
+
+<h2>
+Pure Goodness in Every Bar 🌿
+</h2>
+
+<p>
+Discover our handmade Ayurvedic soaps, carefully crafted with natural ingredients, traditional wisdom and lots of love. Gentle on skin and made in small batches.
+</p>
+
+<div class="soap-features">
+
+<span class="soap-feature">🌿 100% Natural</span>
+<span class="soap-feature">🤲 Handmade</span>
+<span class="soap-feature">✨ Skin Friendly</span>
+<span class="soap-feature">🐰 Cruelty Free</span>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <section id="products">
-  <div class="section-label">Our Collection</div>
-  <div class="section-title">Pick Your Favourite</div>
-  <p class="section-sub">All soaps are ₹300 per bar — handmade in small batches for freshness and quality.</p>
-  <div class="products-grid">
-    <div class="product-card">
-      <div class="product-img turmeric">🌟</div>
-      <div class="product-body">
-        <span class="tag">Bestseller</span>
-        <h3>Turmeric Glow Soap</h3>
-        <p>Organic turmeric and sandalwood brighten dull skin, fade dark spots, and give you an even tone.</p>
-        <div class="product-footer"><div class="price">₹300 <small>/bar</small></div><button class="add-btn" onclick="addCart('Turmeric Glow Soap')">Add to Cart</button></div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="product-img neem">🌿</div>
-      <div class="product-body">
-        <span class="tag">Anti-Acne</span>
-        <h3>Neem Purify Soap</h3>
-        <p>Powerful neem and tulsi combo fights acne, clears pores, and controls excess oil gently.</p>
-        <div class="product-footer"><div class="price">₹300 <small>/bar</small></div><button class="add-btn" onclick="addCart('Neem Purify Soap')">Add to Cart</button></div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="product-img saffron">🌸</div>
-      <div class="product-body">
-        <span class="tag">Luxury</span>
-        <h3>Saffron Royal Soap</h3>
-        <p>Premium Kashmiri saffron, rose petals and milk proteins for a royal glow and silky soft skin.</p>
-        <div class="product-footer"><div class="price">₹300 <small>/bar</small></div><button class="add-btn" onclick="addCart('Saffron Royal Soap')">Add to Cart</button></div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="product-img charcoal">🖤</div>
-      <div class="product-body">
-        <span class="tag">Deep Cleanse</span>
-        <h3>Activated Charcoal Soap</h3>
-        <p>Activated charcoal and neem extract draw out deep impurities for a refreshed, clear complexion.</p>
-        <div class="product-footer"><div class="price">₹300 <small>/bar</small></div><button class="add-btn" onclick="addCart('Activated Charcoal Soap')">Add to Cart</button></div>
-      </div>
-    </div>
-  </div>
+
+<div class="section-label">
+Our Collection
+</div>
+
+<div class="section-title">
+Pick Your Favourite
+</div>
+
+<p class="section-sub">
+All soaps are ₹300 per bar — handmade in small batches for freshness and quality.
+</p>
+
+<div class="products-grid">
+
+<div class="product-card">
+
+<div class="product-img turmeric">
+🌟
+</div>
+
+<div class="product-body">
+
+<span class="tag">Bestseller</span>
+
+<h3>
+Turmeric Glow Soap
+</h3>
+
+<p>
+Organic turmeric and sandalwood brighten dull skin, fade dark spots, and give you an even tone.
+</p>
+
+<div class="product-footer">
+
+<div class="price">
+₹300 <small>/bar</small>
+</div>
+
+<button class="add-btn" onclick="addCart('Turmeric Glow Soap')">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-img neem">
+🌿
+</div>
+
+<div class="product-body">
+
+<span class="tag">Anti-Acne</span>
+
+<h3>
+Neem Purify Soap
+</h3>
+
+<p>
+Powerful neem and tulsi combo fights acne, clears pores, and controls excess oil gently.
+</p>
+
+<div class="product-footer">
+
+<div class="price">
+₹300 <small>/bar</small>
+</div>
+
+<button class="add-btn" onclick="addCart('Neem Purify Soap')">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-img saffron">
+🌸
+</div>
+
+<div class="product-body">
+
+<span class="tag">Luxury</span>
+
+<h3>
+Saffron Royal Soap
+</h3>
+
+<p>
+Premium Kashmiri saffron, rose petals and milk proteins for a royal glow and silky soft skin.
+</p>
+
+<div class="product-footer">
+
+<div class="price">
+₹300 <small>/bar</small>
+</div>
+
+<button class="add-btn" onclick="addCart('Saffron Royal Soap')">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-img charcoal">
+🖤
+</div>
+
+<div class="product-body">
+
+<span class="tag">Deep Cleanse</span>
+
+<h3>
+Activated Charcoal Soap
+</h3>
+
+<p>
+Activated charcoal and neem extract draw out deep impurities for a refreshed, clear complexion.
+</p>
+
+<div class="product-footer">
+
+<div class="price">
+₹300 <small>/bar</small>
+</div>
+
+<button class="add-btn" onclick="addCart('Activated Charcoal Soap')">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <section class="made" id="process">
-  <div class="section-label">Our Process</div>
-  <div class="section-title">Handmade with Ancient Wisdom</div>
-  <div class="steps">
-    <div class="step"><div class="step-num">1</div><h4>Source Ingredients</h4><p>We handpick organic herbs, cold-pressed oils, and botanicals from trusted Ayurvedic farmers.</p></div>
-    <div class="step"><div class="step-num">2</div><h4>Cold Press Method</h4><p>Traditional cold-process method preserves all natural vitamins and nutrients in every bar.</p></div>
-    <div class="step"><div class="step-num">3</div><h4>45-Day Curing</h4><p>Each soap cures for 45 days to achieve perfect hardness, mildness, and a rich lather.</p></div>
-    <div class="step"><div class="step-num">4</div><h4>Handpacked and Shipped</h4><p>Eco-friendly packaging, packed with care and delivered fresh to your doorstep.</p></div>
-  </div>
+
+<div class="section-label">
+Our Process
+</div>
+
+<div class="section-title">
+Handmade with Ancient Wisdom
+</div>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-num">1</div>
+<h4>Source Ingredients</h4>
+<p>
+We handpick organic herbs, cold-pressed oils, and botanicals from trusted Ayurvedic farmers.
+</p>
+</div>
+
+<div class="step">
+<div class="step-num">2</div>
+<h4>Cold Press Method</h4>
+<p>
+Traditional cold-process method preserves all natural vitamins and nutrients in every bar.
+</p>
+</div>
+
+<div class="step">
+<div class="step-num">3</div>
+<h4>45-Day Curing</h4>
+<p>
+Each soap cures for 45 days to achieve perfect hardness, mildness, and a rich lather.
+</p>
+</div>
+
+<div class="step">
+<div class="step-num">4</div>
+<h4>Handpacked and Shipped</h4>
+<p>
+Eco-friendly packaging, packed with care and delivered fresh to your doorstep.
+</p>
+</div>
+
+</div>
+
 </section>
 
 <section class="testimonials" id="reviews">
-  <div class="section-label">Happy Customers</div>
-  <div class="section-title">Real People, Real Results</div>
-  <div class="reviews-grid">
-    <div class="review-card"><div class="stars">★★★★★</div><p>"The Turmeric soap gave me visible glow in just 2 weeks! Will definitely reorder!"</p><div class="reviewer">Priya R. <span>· Hyderabad</span></div></div>
-    <div class="review-card"><div class="stars">★★★★★</div><p>"My son had bad acne. The Neem soap cleared it up in a month. Natural, no side effects!"</p><div class="reviewer">Sunita K. <span>· Vijayawada</span></div></div>
-    <div class="review-card"><div class="stars">★★★★★</div><p>"The Saffron Royal soap feels so luxurious. At Rs.300 this is absolutely the best value!"</p><div class="reviewer">Deepa M. <span>· Bangalore</span></div></div>
-  </div>
+
+<div class="section-label">
+Happy Customers
+</div>
+
+<div class="section-title">
+Real People, Real Results
+</div>
+
+<div class="reviews-grid">
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>
+"The Turmeric soap gave me visible glow in just 2 weeks! Will definitely reorder!"
+</p>
+<div class="reviewer">
+Priya R. <span>· Hyderabad</span>
+</div>
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>
+"My son had bad acne. The Neem soap cleared it up in a month. Natural, no side effects!"
+</p>
+<div class="reviewer">
+Sunita K. <span>· Vijayawada</span>
+</div>
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>
+"The Saffron Royal soap feels so luxurious. At Rs.300 this is absolutely the best value!"
+</p>
+<div class="reviewer">
+Deepa M. <span>· Bangalore</span>
+</div>
+</div>
+
+</div>
+
 </section>
 
 <section class="order-cta" id="order">
-  <h2>Ready to Glow Naturally? 🌿</h2>
-  <p>Enter your phone number and we will reach out to take your order!</p>
-  <div class="order-box">
-    <input type="tel" placeholder="Your phone number" id="phoneInput">
-    <button onclick="submitOrder()">Order Now Rs.300</button>
-  </div>
-  <p style="margin-top:18px;font-size:0.82rem;color:#6B3E26;">Cash on Delivery available · Easy Returns · Ships in 2-3 days</p>
+
+<h2>
+Ready to Glow Naturally? 🌿
+</h2>
+
+<p>
+Enter your phone number and we will reach out to take your order!
+</p>
+
+<div class="order-box">
+
+<input
+type="tel"
+placeholder="Your phone number"
+id="phoneInput"
+>
+
+<button onclick="submitOrder()">
+Order Now Rs.300
+</button>
+
+</div>
+
+<p style="margin-top:18px;font-size:0.82rem;color:#6B3E26;">
+Cash on Delivery available · Easy Returns · Ships in 2-3 days
+</p>
+
 </section>
 
 <footer>
-  <div class="footer-grid">
-    <div>
-      <div class="footer-brand">Nidhi<span>Ayurvedic</span></div>
-      <p>Bringing the ancient healing power of Ayurveda to your daily skincare routine. Handmade with love.</p>
-      <p style="margin-top:14px;">📞 +91 98765 43210<br>📧 hello@nidhiayurvedic.in</p>
-    </div>
-    <div class="footer-links">
-      <h4>Shop</h4>
-      <ul>
-        <li><a href="#products">Turmeric Soap</a></li>
-        <li><a href="#products">Neem Soap</a></li>
-        <li><a href="#products">Saffron Soap</a></li>
-        <li><a href="#products">Charcoal Soap</a></li>
-      </ul>
-    </div>
-    <div class="footer-links">
-      <h4>Info</h4>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">How Its Made</a></li>
-        <li><a href="#">Shipping Policy</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">2026 NidhiAyurvedic. All rights reserved. Made with love in India.</div>
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-brand">
+With<span> Love ❤️</span>
+</div>
+
+<p>
+Pure Ayurvedic care, handmade with love. 🌿❤️
+</p>
+
+<p style="margin-top:14px;">
+📞 +91 98765 43210<br>
+📧 hello@nidhiayurvedic.in
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<h4>Shop</h4>
+
+<ul>
+
+<li><a href="#products">Turmeric Soap</a></li>
+<li><a href="#products">Neem Soap</a></li>
+<li><a href="#products">Saffron Soap</a></li>
+<li><a href="#products">Charcoal Soap</a></li>
+
+</ul>
+
+</div>
+
+<div class="footer-links">
+
+<h4>Info</h4>
+
+<ul>
+
+<li><a href="#">About Us</a></li>
+<li><a href="#">How Its Made</a></li>
+<li><a href="#">Shipping Policy</a></li>
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+2026 With Love. All rights reserved. Made with love in India. ❤️
+</div>
+
 </footer>
 
 <div class="toast" id="toast"></div>
 
 <script>
+
 function addCart(name){
-  var t=document.getElementById('toast');
-  t.textContent='Cart: '+name+' added! Rs.300';
-  t.classList.add('show');
-  setTimeout(function(){t.classList.remove('show')},2800);
+
+var t=document.getElementById('toast');
+
+t.textContent='Cart: '+name+' added! Rs.300';
+
+t.classList.add('show');
+
+setTimeout(function(){
+t.classList.remove('show')
+},2800);
+
 }
-function scrollOrder(){document.getElementById('order').scrollIntoView({behavior:'smooth'});}
+
+function scrollOrder(){
+
+document.getElementById('order')
+.scrollIntoView({
+behavior:'smooth'
+});
+
+}
+
 function submitOrder(){
-  var p=document.getElementById('phoneInput').value.trim();
-  if(!p){alert('Please enter your phone number!');return;}
-  var t=document.getElementById('toast');
-  t.textContent='Order received! We will call you soon.';
-  t.classList.add('show');
-  document.getElementById('phoneInput').value='';
-  setTimeout(function(){t.classList.remove('show')},3500);
+
+var p=document
+.getElementById('phoneInput')
+.value.trim();
+
+if(!p){
+
+alert('Please enter your phone number!');
+
+return;
+
 }
+
+var t=document.getElementById('toast');
+
+t.textContent='Order received! We will call you soon.';
+
+t.classList.add('show');
+
+document.getElementById('phoneInput').value='';
+
+setTimeout(function(){
+t.classList.remove('show')
+},3500);
+
+}
+
 </script>
+
 </body>
 </html>
